@@ -99,31 +99,6 @@ Basic Vector Operations:
     7. Clearing the Vector: The clear() function removes all elements from the vector, effectively
     emptying it.
         numbers.clear(); // Clearing the vector
-
-Various Functions in Vectors:
-    Iterators:
-        Function        |           Description             |       Example Code
-        -----------------------------------------------------------------------------
-        begin()         | Iterator to beginnig              | auto it = a.begin();
-        -----------------------------------------------------------------------------
-        end()           | Iterator to end                   | auto it = a.end()
-        -----------------------------------------------------------------------------
-        rbegin()        | Reverse iterator to reverse       | auto rit = a.rbegin()
-                          beginning
-        -----------------------------------------------------------------------------
-        rend()          | Reverse iterator to reverse end   | auto rit = a.end()
-        -----------------------------------------------------------------------------
-        cbegin()        | const_iterator to beginning       | auto cit = a.cbegin()
-        -----------------------------------------------------------------------------
-        cend()          | const_iterator                    | auto cit = a.cend()
-        -----------------------------------------------------------------------------
-        crbegin()       | const_reverse_iterator to reverse | auto crit = a.crbegin()
-                          beginning
-        -----------------------------------------------------------------------------
-        crend()         | const_reverse_iterator to reverse | auto crit = a.crend()
-                          end
-
-
 */
 
 #include <iostream>
@@ -143,11 +118,45 @@ int main()
 {
     // different ways of initialization
     vector<int> vect1(5);
-    cout << "Vector with size of 5: " << endl;
+    cout << "Vector 1: " << endl;
     display(vect1);
 
     vector<int> vect2{1, 2, 3, 4, 5, 6, 7};
     cout << "\nVector 2: " << endl;
     display(vect2);
+
+    // size
+    cout << "\nSize of vector 1: " << vect1.size() << "\nSize of vector 2: " << vect2.size() << endl;
+
+    vector<int> vect3;
+    int size = 10;
+    cout << "The elements in the vector 3: " << endl;
+    for (int i = 1; i < +size; i++)
+    {
+        // add the elements to end of the vector
+        vect3.push_back(i);
+    }
+    display(vect3);
+
+    // pop the element from the vector
+    cout << "\nAfter poping the vector: " << endl;
+    vect3.pop_back();
+    display(vect3);
+
+    // front() & back()
+    cout << "\n"
+         << "Front element: " << vect3.front() << "\nBack Element: " << vect3.back() << endl;
+
+    vector<int>::iterator it;
+    cout << "Vector 3 elements - iterators: " << endl;
+    for (auto it = vect3.begin(); it != vect3.end(); it++)
+    {
+        cout << *(it) << " ";
+    }
+
+    // inserting an element
+    vect3.insert(vect3.begin(), 0);
+    cout << "\nAfter inserting an element: " << endl;
+    display(vect3);
     return 0;
 }
