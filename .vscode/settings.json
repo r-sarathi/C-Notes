@@ -4,6 +4,7 @@
     "valarray": "cpp",
     "chrono": "cpp",
     "span": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "ostream": "cpp"
   }
 }
