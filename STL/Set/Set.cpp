@@ -67,3 +67,15 @@ int main()
 
     return 0;
 }
+
+/*
+
+Output:
+Elements in the set: 5 10 15 20
+15 is present in the set.
+10 is not present in the set.
+Elements in the set after deletion: 5 15 20
+Size of the set: 3
+Size of the set after clearing: 0
+
+*/
