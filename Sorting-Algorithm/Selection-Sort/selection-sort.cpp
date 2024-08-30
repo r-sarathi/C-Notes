@@ -1,3 +1,16 @@
+/*
+
+Selection Sort:
+    - Selection sort is a simple and efficient sorting algorithm that works by repeatedly
+    selecting the smallest (or largest) element from the unsorted portion of the list
+    and moving it to the sorted portion of the list and moving it to the sorted portion of
+    the list.
+
+Time Complexity = O(N^2)
+Space Complexity = O(1)
+
+*/
+
 #include <iostream>
 using namespace std;
 
