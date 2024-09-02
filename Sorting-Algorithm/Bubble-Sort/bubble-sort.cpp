@@ -1,15 +1,3 @@
-/*
-
-Bubble Sort:
-    - It is the simplest sorting algorithm that works by repeatedly swapping the adjacent
-    elements if they are in the wrong order. This algorithm is not suitable for large data sets
-    as its average and worst-case time complexity is quite high.
-
-Time Complexity = O(N^2)
-Space Complexity = O(1)
-
-*/
-
 #include <iostream>
 using namespace std;
 
@@ -19,6 +7,7 @@ void bubbleSort(int arr[], int n)
     for (int i = 0; i < n - 1; i++)
     {
         swapped = false;
+        cout << "Round " << i + 1 << ": ";
         for (int j = 0; j < n - i - 1; j++)
         {
             if (arr[j] > arr[j + 1])
@@ -27,16 +16,24 @@ void bubbleSort(int arr[], int n)
                 swapped = true;
             }
         }
+
+        for (int k = 0; k < n; k++)
+        {
+            cout << arr[k] << " ";
+        }
+        cout << endl;
+
         if (swapped == false)
         {
             break;
         }
     }
-    cout << "After sorting an array: ";
+    cout << "After sorting the array: ";
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
     }
+    cout << endl;
 }
 
 int main()
@@ -46,10 +43,3 @@ int main()
     bubbleSort(arr, n);
     return 0;
 }
-
-/*
-
-Output:
-After sorting an array: 1 2 3 6 13 23
-
-*/
